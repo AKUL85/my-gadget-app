@@ -1,0 +1,111 @@
+[
+    {
+      "product_id": "SP102",
+      "product_title": "Galaxy Vibe",
+      "product_image": "https://i.postimg.cc/MZByPV8F/images-1.jpg",
+      "category": "Smartphones",
+      "price": 799,
+      "description": "Powerful Android phone with excellent camera.",
+      "specification": ["6.5-inch AMOLED", "256GB Storage", "Quad Camera"],
+      "availability": true,
+      "rating": 4.6,
+      "brand": "GalaTech"
+    },
+    {
+      "product_id": "SP103",
+      "product_title": "Pixel Vision",
+      "product_image": "https://i.postimg.cc/W4fMK73Q/riga-latvia-august-2024-new-260nw-2503673825.webp",
+      "category": "Smartphones",
+      "price": 699,
+      "description": "Smartphone with best-in-class AI camera features.",
+      "specification": ["6.3-inch OLED", "128GB", "Dual AI Camera"],
+      "availability": true,
+      "rating": 4.7,
+      "brand": "Google"
+    },
+    {
+      "product_id": "SP104",
+      "product_title": "Note Ultra",
+      "product_image": "https://i.postimg.cc/13scNt2Y/mobile-phone-2198770-1280.webp",
+      "category": "Smartphones",
+      "price": 850,
+      "description": "Large-screen phone perfect for work and play.",
+      "specification": ["6.9-inch Display", "512GB Storage", "Stylus Support"],
+      "availability": false,
+      "rating": 4.4,
+      "brand": "NoteCo"
+    },
+    {
+      "product_id": "SP105",
+      "product_title": "RenoX",
+      "product_image": "https://i.postimg.cc/XJmkZg6w/oppo-g-samsung-hand-placing-two-brand-new-android-smartphone-boxes-mobile-device-packages-closeup-pa.webp",
+      "category": "Smartphones",
+      "price": 599,
+      "description": "Compact design with flagship performance.",
+      "specification": ["6.1-inch LCD", "128GB", "Triple Camera"],
+      "availability": true,
+      "rating": 4.3,
+      "brand": "Oppo"
+    },
+    {
+      "product_id": "SP106",
+      "product_title": "RealMe Storm",
+      "product_image": "https://i.postimg.cc/L4JyHJFt/sddefault.jpg",
+      "category": "Smartphones",
+      "price": 549,
+      "description": "Great battery life and smooth performance.",
+      "specification": ["6.5-inch Display", "128GB", "5000mAh Battery"],
+      "availability": true,
+      "rating": 4.2,
+      "brand": "RealMe"
+    },
+    {
+      "product_id": "LT201",
+      "product_title": "UltraBook 14",
+      "product_image": "https://i.postimg.cc/Pf7mKycZ/pexels-life-of-pix-7974.jpg",
+      "category": "Laptops",
+      "price": 1099,
+      "description": "Lightweight laptop for professionals.",
+      "specification": ["14-inch FHD", "16GB RAM", "512GB SSD"],
+      "availability": true,
+      "rating": 4.5,
+      "brand": "UltraTech"
+    },
+    {
+      "product_id": "LT202",
+      "product_title": "Gaming Beast X",
+      "product_image": "https://i.postimg.cc/T1fBsGh7/pexels-craigmdennis-205421.jpg",
+      "category": "Laptops",
+      "price": 1499,
+      "description": "Top-tier gaming laptop with RGB keyboard.",
+      "specification": ["15.6-inch QHD", "32GB RAM", "1TB SSD", "RTX 3080"],
+      "availability": false,
+      "rating": 4.9,
+      "brand": "GameForce"
+    },
+    {
+      "product_id": "SW301",
+      "product_title": "FitTrack Pro",
+      "product_image": "https://i.postimg.cc/bNzjC0ty/pexels-pixabay-277390.jpg",
+      "category": "Smartwatches",
+      "price": 199,
+      "description": "Health-focused smartwatch with accurate tracking.",
+      "specification": ["Heart Rate Monitor", "Sleep Tracking", "5ATM Water Resistant"],
+      "availability": true,
+      "rating": 4.1,
+      "brand": "FitTrack"
+    },
+    {
+      "product_id": "SW302",
+      "product_title": "WatchHub Elite",
+      "product_image": "https://i.postimg.cc/28mzpRPf/images.jpg",
+      "category": "Smartwatches",
+      "price": 249,
+      "description": "Premium smartwatch with calling feature.",
+      "specification": ["Bluetooth Calling", "AMOLED Display", "GPS"],
+      "availability": true,
+      "rating": 4.6,
+      "brand": "WatchHub"
+    }
+  ]
+  
