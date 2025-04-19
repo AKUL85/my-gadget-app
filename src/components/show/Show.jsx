@@ -4,7 +4,7 @@ import { removeFromLocalstorage } from '../../utility/remove';
 
 const Show = ({ item, showType }) => {
     const { product_image, product_title, description, price, product_id } = item;
-
+       
     return (
         <div className="flex bg-white shadow-md rounded-lg overflow-hidden mb-6 hover:shadow-lg transition-shadow duration-300 my-8">
             <div className="border-r border-gray-100 flex items-center justify-center p-4 bg-gray-50">

@@ -58,7 +58,10 @@ const ProductDetails = () => {
                             </div>
 
                             <div className="card-actions pt-2 sm:pt-4">
-                                <button onClick={() => addCart(product_id)} className="btn btn-primary px-4 py-2 sm:px-6 rounded-lg hover:bg-opacity-90 transition">
+                                <button  onClick={() =>{
+                                   
+                                    addCart(product_id)
+                                } } className="btn btn-primary px-4 py-2 sm:px-6 rounded-lg hover:bg-opacity-90 transition">
                                     Add to Card
                                 </button>
                                 <button onClick={()=>addWish(product_id)} className="btn btn-primary px-4 py-2 sm:px-6 rounded-lg hover:bg-opacity-90 transition">

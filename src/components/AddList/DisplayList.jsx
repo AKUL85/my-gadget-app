@@ -14,6 +14,7 @@ const DisplayList = ({ data, showType, isSorted }) => {
 
   if (isSorted) {
     itemsToDisplay = [...itemsToDisplay].sort((a, b) => a.price - b.price);
+    
   }
 
   return (

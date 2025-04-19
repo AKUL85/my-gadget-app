@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import DisplayList from '../AddList/DisplayList';
+import { getStoredList } from '../../utility/Utility';
 
 const DashBoard = () => {
   const AllData = useLoaderData();
@@ -13,6 +14,19 @@ const DashBoard = () => {
     }
     
   };
+  const takaStored=getStoredList();
+
+
+  const SetValue = () => {
+    let total = 0;
+    AllData.forEach(item => {
+      if (takaStored.includes(item.product_id)) {
+        total += item.price;
+      }
+    });
+    return total;
+  };
+  
 
   return (
     <div>
@@ -42,7 +56,7 @@ const DashBoard = () => {
         <div className='flex justify-between'>
           <h1 className='font-bold'>{showType === 'cart' ? 'Cart' : 'WishList'}</h1>
           <div className='flex justify-evenly gap-2 items-center'>
-            <h1 className='font-bold'>Total Cost:</h1>
+            <h1 className='font-bold'>Total Cost:{SetValue()} $</h1>
             <button
               className='bg-white text-[#9538E2] px-4 py-1 rounded-xl hover:bg-red-100'
               onClick={handleSortToggle}
