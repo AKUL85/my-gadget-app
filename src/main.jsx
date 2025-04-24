@@ -12,6 +12,7 @@ import Home from './components/Home/Home';
 import Statistic from './components/Statistic/Statistic';
 import ProductDetails from './components/Product_details/ProductDetails';
 import DashBoard from './components/Dashboard/DashBoard';
+import Review from './components/Review/Review';
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
         path:"/dashboard",
         element:<DashBoard></DashBoard>,
         loader: () => fetch("/gadgetData.json")
+      },
+      {
+        path:"/review",
+        element:<Review></Review>
       }
       
 
