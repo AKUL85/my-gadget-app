@@ -2,19 +2,19 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import DisplayList from '../AddList/DisplayList';
 import { getStoredList } from '../../utility/Utility';
-
+import image from '../../assets/Group.png';
 const DashBoard = () => {
   const AllData = useLoaderData();
-  const [showType, setShowType] = useState('cart'); 
-  const [isSorted, setIsSorted] = useState(false); 
+  const [showType, setShowType] = useState('cart');
+  const [isSorted, setIsSorted] = useState(false);
 
   const handleSortToggle = () => {
-    if(isSorted===false){
+    if (isSorted === false) {
       setIsSorted(!isSorted);
     }
-    
+
   };
-  const takaStored=getStoredList();
+  const takaStored = getStoredList();
 
 
   const SetValue = () => {
@@ -26,7 +26,7 @@ const DashBoard = () => {
     });
     return total;
   };
-  
+
 
   return (
     <div>
@@ -63,12 +63,32 @@ const DashBoard = () => {
             >
               Sort Price
             </button>
-            <button className='bg-[#9538E2] px-4 py-1 text-white rounded-xl'>Purchase</button>
+            <button  onClick={() => document.getElementById('my_modal_1').showModal()} className='bg-[#9538E2] px-4 py-1 text-white rounded-xl'>Purchase</button>
           </div>
         </div>
 
         <DisplayList data={AllData} showType={showType} isSorted={isSorted} />
       </div>
+     
+     
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+         <div className='flex justify-center '>
+        <div>
+        <img className='mx-auto' src={image} alt="" />
+          <h3 className="font-bold text-lg">{(SetValue()>0)? "Payment Successful":"NO Item To Purchase"}</h3>
+          <p className="py-4">{(SetValue()>0)? "Thanks For Purchasing":""}</p>
+          <h3>Total Cost:{SetValue()}</h3>
+        </div>
+         </div>
+          <div className="modal-action">
+            <form method="dialog">
+            
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

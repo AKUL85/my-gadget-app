@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useState } from 'react';
 import ShowData from '../ShowData/ShowData';
 import Category_btn from '../category/Category_btn';
 
-const Item = () => {
+const Item = forwardRef((props, ref) => {
     const [shows, setShows] = useState([]);
-    const [allData, setAllData] = useState([]); 
+    const [allData, setAllData] = useState([]);
 
     useEffect(() => {
         fetch('gadgetData.json')
             .then(res => res.json())
             .then(data => {
                 setShows(data);
-                setAllData(data); 
+                setAllData(data);
             });
     }, []);
 
     const handleButton = (cat) => {
         if (cat === 'product') {
-            setShows(allData); 
+            setShows(allData);
         } else if (cat === 'phone') {
             setShows(allData.filter(i => i.category === "Smartphones"));
         } else if (cat === 'laptop') {
@@ -30,12 +30,12 @@ const Item = () => {
     return (
         <div>
             <h1 className='text-2xl font-bold text-center my-4'>Explore Cutting-Edge Gadgets</h1>
-            
+
             <div className='md:flex gap-4'>
                 <div>
                     <Category_btn handleButton={handleButton} />
                 </div>
-                <div className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 my-8 '>
+                <div ref={ref} className='grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 my-8'>
                     {
                         shows.map(data => (
                             <ShowData key={data.product_id} data={data} />
@@ -45,6 +45,6 @@ const Item = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Item;

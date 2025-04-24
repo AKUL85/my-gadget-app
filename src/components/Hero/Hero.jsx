@@ -1,6 +1,7 @@
-import React from 'react';
+
 import banner from '../../assets/banner.jpg'
-const Hero = () => {
+const Hero = ({ handleScroll }) => {
+
     return (
         <div>
             <div className='relative md:mb-72 mb-40'>
@@ -13,9 +14,10 @@ const Hero = () => {
                         From smart devices to the coolest accessories, we have it all!
                     </p>
                     <div className="flex justify-center my-6 mb-10">
-                        <button className="text-purple-500 bg-white px-5 py-2 rounded-2xl font-bold hover:bg-purple-100">
+                        <button onClick={handleScroll} className="text-purple-500 bg-white px-5 py-2 rounded-2xl font-bold hover:bg-purple-100">
                             Shop Now
                         </button>
+
                     </div>
                 </section>
                 <div className='absolute lg:left-60 md:left-50 md:top-70 left-20 top-70'>
