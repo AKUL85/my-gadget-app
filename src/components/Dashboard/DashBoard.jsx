@@ -41,7 +41,7 @@ const DashBoard = () => {
       localStorage.removeItem(key);
       setStoredIds([]);
       setTotalCost(0);
-      setIsModalOpen(true); // Only open modal if totalCost > 0
+      setIsModalOpen(true);
     }
   };
 
@@ -51,13 +51,18 @@ const DashBoard = () => {
 
   return (
     <div>
-      <div className='space-y-5 py-6 bg-[#9538E2]'>
+      {/* Top Header Section */}
+      <div className='space-y-5 py-6 px-4 md:px-6 bg-[#9538E2]'>
         <h1 className='font-bold text-2xl text-center text-white'>Dashboard</h1>
-        <div>
-          <p className='text-center text-white'>Explore the latest gadgets that will take your experience to the next level.</p>
-          <p className='text-center text-white'>From smart devices to the coolest accessories, we have it all!</p>
+        <div className='space-y-1'>
+          <p className='text-center text-white text-sm md:text-base'>
+            Explore the latest gadgets that will take your experience to the next level.
+          </p>
+          <p className='text-center text-white text-sm md:text-base'>
+            From smart devices to the coolest accessories, we have it all!
+          </p>
         </div>
-        <div className='flex justify-center gap-6'>
+        <div className='flex flex-wrap justify-center gap-4'>
           <button
             className={`btn ${showType === 'cart' ? 'btn-warning' : 'btn-outline'} text-white`}
             onClick={() => setShowType('cart')}
@@ -73,26 +78,32 @@ const DashBoard = () => {
         </div>
       </div>
 
-      <div className='my-8'>
-        <div className='flex justify-between'>
-          <h1 className='font-bold'>{showType === 'cart' ? 'Cart' : 'WishList'}</h1>
-          <div className='flex justify-evenly gap-2 items-center'>
-            <h1 className='font-bold'>Total Cost: {totalCost} $</h1>
+      {/* Main Section */}
+      <div className='my-8 px-4 md:px-6'>
+        <div className='flex flex-col gap-4 md:flex-row md:justify-between items-start md:items-center'>
+          <h1 className='font-bold text-lg'>
+            {showType === 'cart' ? 'Cart' : 'WishList'}
+          </h1>
+          <div className='flex flex-wrap gap-2 items-center'>
+            <h1 className='font-bold text-sm md:text-base'>
+              Total Cost: {totalCost} $
+            </h1>
             <button
-              className='bg-white text-[#9538E2] px-4 py-1 rounded-xl hover:bg-red-100'
+              className='bg-white text-[#9538E2] px-4 py-1 rounded-xl hover:bg-red-100 text-sm'
               onClick={handleSortToggle}
             >
               Sort Price
             </button>
             <button
               onClick={handlePurchase}
-              className='bg-[#9538E2] px-4 py-1 text-white rounded-xl'
+              className='bg-[#9538E2] px-4 py-1 text-white rounded-xl text-sm'
             >
               Purchase
             </button>
           </div>
         </div>
 
+        {/* List Display */}
         <DisplayList
           data={AllData}
           showType={showType}
@@ -102,27 +113,16 @@ const DashBoard = () => {
         />
       </div>
 
-      {/* Modal - Only show if isModalOpen is true */}
+      {/* Modal */}
       {isModalOpen && (
         <dialog id="my_modal_1" className="modal modal-open">
-          <div className="modal-box">
-            <div className='flex justify-center'>
-              <div>
-                <img className='mx-auto' src={image} alt="" />
-                <h3 className="font-bold text-lg">
-                  Payment Successful
-                </h3>
-                <p className="py-4">Thanks For Purchasing</p>
-              </div>
-            </div>
-            <div className="modal-action">
+          <div className="modal-box text-center px-4">
+            <img className='mx-auto max-w-[150px] mb-4' src={image} alt="Success" />
+            <h3 className="font-bold text-lg">Payment Successful</h3>
+            <p className="py-2">Thanks For Purchasing</p>
+            <div className="modal-action justify-center">
               <form method="dialog">
-                <button
-                  className="btn"
-                  onClick={handleCloseModal}
-                >
-                  Close
-                </button>
+                <button className="btn" onClick={handleCloseModal}>Close</button>
               </form>
             </div>
           </div>
