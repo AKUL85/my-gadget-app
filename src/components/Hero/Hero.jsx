@@ -20,7 +20,7 @@ const Hero = ({ handleScroll }) => {
 
                     </div>
                 </section>
-                <div className='absolute lg:left-60 md:left-50 md:top-70 left-20 top-70'>
+                <div className='absolute lg:left-60 md:left-50 md:top-70 left-20 top-75'>
                     <img className='md:h-80 md:w-140 h-50 w-100 rounded-2xl' src={banner} alt="" />
                 </div>
             </div>
