@@ -4,7 +4,7 @@ const Hero = ({ handleScroll }) => {
 
     return (
         <div>
-            <div className='relative md:mb-72 mb-40'>
+            <div className='relative md:mb-72 mb-60'>
                 <section className="space-y-3 bg-[#9538E2] px-4 py-10 text-white ">
                     <h1 className="text-3xl md:text-5xl font-bold text-center">
                         Upgrade Your Tech Accessories with Gadget Heaven
@@ -20,7 +20,7 @@ const Hero = ({ handleScroll }) => {
 
                     </div>
                 </section>
-                <div className='absolute lg:left-60 md:left-50 md:top-70 left-20 top-75'>
+                <div className='absolute lg:left-60 md:left-50 md:top-70 left-20 top-75 '>
                     <img className='md:h-80 md:w-140 h-50 w-100 rounded-2xl' src={banner} alt="" />
                 </div>
             </div>

@@ -15,7 +15,7 @@ const DisplayList = ({ data, showType, isSorted, storedIds, onRemove }) => {
   }, [data, storedIds, showType, isSorted]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 mt-16">
       {itemsToDisplay.map(item => (
         <Show
           key={item.product_id}
